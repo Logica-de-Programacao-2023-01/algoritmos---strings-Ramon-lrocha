@@ -1,0 +1,20 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	var texto string
+	fmt.Print("Digite uma string: ")
+	fmt.Scanln(&texto)
+
+	runes := []rune(texto)
+	for i, j := 0, len(runes)-1; i < j; i, j = i+1, j-1 {
+		runes[i], runes[j] = runes[j], runes[i]
+	}
+
+	resultado := string(runes)
+	fmt.Println("Resultado:", resultado)
+}

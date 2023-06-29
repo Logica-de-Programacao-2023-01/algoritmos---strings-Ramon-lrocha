@@ -1,0 +1,19 @@
+package main
+
+import (
+	"fmt"
+	"strconv"
+)
+
+func main() {
+	var texto string
+	fmt.Print("Digite uma string: ")
+	fmt.Scanln(&texto)
+
+	_, err := strconv.Atoi(texto)
+	if err == nil {
+		fmt.Println("A string contém somente números.")
+	} else {
+		fmt.Println("A string não contém somente números.")
+	}
+}

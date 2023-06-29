@@ -1,0 +1,20 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	var texto string
+	fmt.Print("Digite uma string: ")
+	fmt.Scanln(&texto)
+
+	runes := []rune(texto)
+	invertido := ""
+	for i := len(runes) - 1; i >= 0; i-- {
+		invertido += string(runes[i])
+	}
+
+	fmt.Println("String invertida:", invertido)
+}
